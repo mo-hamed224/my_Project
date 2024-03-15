@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description"content=""/>
+    <title>fashion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"href="css/font-awesome.min.css">
+    <link rel="stylesheet"href="css/style.css">
+
+    <style >
+        body {
+            margin: 0px;
+            background-image: url(./imgs/main-banner-1-1600x700.jpg);
+            color: #f7f7f7;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #main {
+            width: 600px;
+            height: 260px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            padding-left: 10px;
+            margin-top: 100px;
+            border-top: 3px double #f1f1f1;
+            border-bottom: 3px double #f1f1f1;
+            padding-top: 20px;
+        }
+        
+        #main table {
+            font-family: "Comic Sans MS", cursive;
+        }
+        /* css code for textbox */
+        
+        #main .tb {
+            height: 28px;
+            width: 230px;
+            border: none;
+            font-weight: bold;
+            border-left: 5px solid #f7f7f7;
+            opacity: 0.9;
+        }
+        /* css code for button*/
+        
+        #main .btn {
+            width: 80px;
+            height: 32px;
+            font-weight: bold;
+            border-radius: 1px;
+            font-weight: 600;
+            color: brown;
+            letter-spacing: 1px;
+            font-size: 14px;
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            transition: 1s;
+        }
+        
+        #main .btn:hover {
+            background-color: brown;
+            border-radius: 2px;
+            color: #f1f1f1;
+            border: 1px solid #f1f1f1;
+        }
+               #main .control{color: brown;}
+
+        
+    </style>
+
+    <script>
+        function login() {
+            var uname = document.getElementById("email").value;
+            var pwd = document.getElementById("pwd1").value;
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (uname == '') {
+                alert("please enter user name.");
+            } else if (pwd == '') {
+                alert("enter the password");
+            } else if (!filter.test(uname)) {
+                alert("Enter valid email id.");
+            } else if (pwd.length < 6 || pwd.length > 6) {
+                alert("Password min and max length is 6.");
+            } else {
+                alert('Thank You for Login & You are Redirecting to Campuslife Website');
+                //Redirecting to other page or webste code or you can set your own html page.
+                window.location = "https://www.campuslife.co.in";
+            }
+        }
+        //Reset Inputfield code.
+        function clearFunc() {
+            document.getElementById("email").value = "";
+            document.getElementById("pwd1").value = "";
+        }
+    </script>
+    <title>Welcome To Login Form</title>
+</head>
+
+<body>
+          
+    <div class="header">
+        <div class="container">       
+        <div class="logo">
+           <img src="./imgs/logo.png"alt="logo"draggable="false">
+     </div>
+     <ul class="nav">
+       <li><a href="index.html" class="active" target="_blank">furniture</a></li>
+       <li><a href="men.html"target="_blank" >armoires</a></li>
+       <li><a href="beds.html"target="_blank" >beds</a></li>
+       <li><a href="tables.html"target="_blank" >tables</a></li>
+       <li><a href="login.html"target="_blank">login</a></li>
+       <li><a href="contact.html"target="_blank">contact us</a></li>
+       
+     </ul>
+          
+          <div class="clear"></div>
+
+    <!-- Main div code -->
+    <div id="main">
+        <div class="h-tag">
+        </div>
+        <!-- Login box -->
+        <div class="login">
+            <table cellspacing="2" align="center" cellpadding="8" border="0">
+                <tr>
+                    <td><input type="text" placeholder="Enter user name here" id="email" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td><input type="password" placeholder="Enter Password here" id="pwd1" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                       
+                        <input type="submit" value="Reset" onclick="clearFunc()" class="btn" />
+                        <div><a href="file:///C:/Users/mf/Desktop/projcet%20final/index.html"></a>
+                        <input  type="submit" value="Login" class="btn" onClick="login()" /></td>
+                    </div>
+                </tr>
+            </table>
+        </div>
+        <!-- login box div ending here.. -->
+    </div>
+    <!-- Main div ending here... -->
+
+</body>
+
+</html>
